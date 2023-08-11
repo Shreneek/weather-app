@@ -11,7 +11,6 @@ import { CiLocationOn } from "react-icons/ci"
 import { useState } from 'react';
 
 const App = () => {
-
   const [weatherData, setweatherData] = useState("")
   const [cityName, setcityName] = useState("")
   const [imgSrc, setimgSrc] = useState("")
@@ -20,6 +19,7 @@ const App = () => {
     const name = event.target.value
     setcityName(name)
   }
+  
   const submitHandler = (event) => {
     event.preventDefault(); //prevent reloading
     // console.log(cityName)
@@ -65,7 +65,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="card" style={{ width: '25em' }}>
+        <div className="card">
           <h5 className="card-title">Weather App</h5>
           <hr></hr>
           <div className="card-body">
