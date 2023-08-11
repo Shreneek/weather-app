@@ -2,69 +2,75 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Weather-App
+Welcome to the Weather App! This application allows users to input a location and view weather information for that location.
 
-In the project directory, you can run:
+### About The Project
 
-### `npm start`
+This Project shows us the weather of any city, just enter the name of a city around the world to get the current weather condtions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I have used ReactJs Library for building this application along with HTML and CSS for making the good user interface and fetched the open weather api using Javascript for getting the current weather deatils on input city name. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps to run Project Locally 
+**Prerequisites:** Make sure you have Node.js and npm installed on your device.
 
-### `npm test`
+**Clone the repository:**
+```bash
+     git clone https://github.com/Shreneek/weather-app.git
+```     
+1. Navigate to the Project Directory:
+```bash
+     cd weather-app
+```
+2. Install Dependencies: Install the required dependencies by running:
+```bash
+     npm install
+```
+3. Start the Development Server: Start the local development server with the following command:
+```bash
+     npm start
+```
+The app should now be accessible at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Interact with the App:
 
-### `npm run build`
+<ul>
+  <li>Open your web browser and navigate to above localhost link.</li>
+   <li>Input a city name in the provided form.</li>
+   <li>Click the submit button or hit enter from keyboard.</li>
+   <li>Weather information for the city will be displayed, including temperature, humidity, and weather conditions.</li>
+</ul> 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Live Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://reveal-weather.netlify.app" target="_blank">Click here to view App</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sample-Images of App
+1. Initial Webpage
+   
+![Screenshot (274)](https://github.com/Shreneek/weather-app/assets/71518411/ef67c452-bce6-4e19-87d0-96a35dd25343)
 
-### `npm run eject`
+2. Input the Location
+   
+![Screenshot (275)](https://github.com/Shreneek/weather-app/assets/71518411/ac1ed254-437a-4ed6-9343-b7d97f9042ac)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Updated Web page with weather deatils of input city after clicking on submit button
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot (276)](https://github.com/Shreneek/weather-app/assets/71518411/dc0b0853-bd00-47e4-8567-a8d83fd64dbf)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Checking multiple cities weather
+   
+![Screenshot (277)](https://github.com/Shreneek/weather-app/assets/71518411/77a17734-754b-4984-9064-19deb9bd1433)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot (278)](https://github.com/Shreneek/weather-app/assets/71518411/44510741-ea73-4cf8-bf15-81f582ba2e7e)
 
-## Learn More
+![Screenshot (279)](https://github.com/Shreneek/weather-app/assets/71518411/d50f4a9a-4a9d-40cd-b8a1-a13d584bf0ca)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Input wrong location or blank input
+   
+![Screenshot (280)](https://github.com/Shreneek/weather-app/assets/71518411/6cc957cb-67bd-405b-8ee2-6dc7f1760783)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Screenshot (281)](https://github.com/Shreneek/weather-app/assets/71518411/2ca3f4d2-767b-443a-82c8-41170d3ea9be)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"><b>Created by Shreneek Nahar</b></p>
