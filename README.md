@@ -39,6 +39,7 @@ The app should now be accessible at http://localhost:3000.
    <li>Input a city name in the provided form.</li>
    <li>Click the submit button or hit enter from keyboard.</li>
    <li>Weather information for the city will be displayed, including temperature, humidity, and weather conditions.</li>
+   <li>Users can click on the button to change the Temperature degree.</li>
 </ul> 
 
 ### Live Demo
@@ -56,7 +57,7 @@ The app should now be accessible at http://localhost:3000.
 
 3. Updated Web page with weather deatils of input city after clicking on submit button
 
-![Screenshot (276)](https://github.com/Shreneek/weather-app/assets/71518411/dc0b0853-bd00-47e4-8567-a8d83fd64dbf)
+![Screenshot (341)](https://github.com/Shreneek/weather-app/assets/71518411/457783b0-ace6-4397-bfb7-a6cdff834cb3)
 
 4. Checking multiple cities weather
    
@@ -72,5 +73,8 @@ The app should now be accessible at http://localhost:3000.
 
 ![Screenshot (281)](https://github.com/Shreneek/weather-app/assets/71518411/2ca3f4d2-767b-443a-82c8-41170d3ea9be)
 
+6. Change the Temperature from Celsius to Fahrenheit
+
+![Screenshot (342)](https://github.com/Shreneek/weather-app/assets/71518411/7f2e7e14-f331-450e-8a76-956b2c74d895)
 
 <p align="center"><b>Created by Shreneek Nahar</b></p>

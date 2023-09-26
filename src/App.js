@@ -14,20 +14,31 @@ const App = () => {
   const [weatherData, setweatherData] = useState("")
   const [cityName, setcityName] = useState("")
   const [imgSrc, setimgSrc] = useState("")
+  const [temperatureUnit, setTemperatureUnit] = useState('C')
 
   const changeHandler = (event) => {
     const name = event.target.value
     setcityName(name)
   }
-  
+
   const submitHandler = (event) => {
     event.preventDefault(); //prevent reloading
     // console.log(cityName)
     fetch_api(cityName)
   }
 
+  const celsiusToFahrenheit = (celsius) => {
+    return Math.round((celsius * 9) / 5 + 32);
+  };
+
+  const handleToggleClick = () => {
+    setTemperatureUnit((prevUnit) =>
+      prevUnit === 'C' ? 'F' : 'C'
+    );
+  };
+
   const updateImg = (details) => {
-    console.log(details, ", weather detailed data")
+    console.log(details, ", weather detailed data found")
     switch (details) {
       case "Clouds":
         setimgSrc(cloudImg);
@@ -52,7 +63,7 @@ const App = () => {
   const fetch_api = async (cityName) => {
     try {
       const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=6d5a8f6bca8950c6e569607adc87a9be&units=metric`);
-      // console.log(res.data)
+      //console.log(res.data)
       setweatherData(res.data)
       updateImg(res.data.weather[0].main)
     } catch (error) {
@@ -75,13 +86,17 @@ const App = () => {
                 <button type="submit" className="btn btn-primary">Submit</button>
               </div>
             </form>
-            {!!weatherData &&
+            {weatherData &&
               <header>
                 <div className="Weather-body">
                   <img src={imgSrc} alt='weatherImg' style={{ width: 150 }}></img>
                 </div>
                 <div className="weather-box">
-                  <p className="temperature">{weatherData.main.temp}°C</p>
+                  <p className="temperature">
+                    {temperatureUnit === 'C'
+                      ? Math.round(weatherData.main.temp)
+                      : celsiusToFahrenheit(weatherData.main.temp)}°{temperatureUnit}
+                  </p>
                   <p className="description">{weatherData.weather[0].description}</p>
                   <CiLocationOn /><span style={{ marginLeft: 5 }}>{weatherData.name}, {weatherData.sys.country}</span>
                 </div>
@@ -89,7 +104,11 @@ const App = () => {
                 <div className="weather-details">
                   <div className='feels-like'>
                     <div className='text'>
-                      <FaTemperatureLow style={{ color: "cadetblue" }} /><span style={{ marginLeft: 2 }}>{weatherData.main.feels_like}°C</span>
+                      <FaTemperatureLow style={{ color: "cadetblue" }} /><span style={{ marginLeft: 2 }}>
+                        {temperatureUnit === 'C'
+                          ? Math.round(weatherData.main.temp)
+                          : celsiusToFahrenheit(weatherData.main.temp)}°{temperatureUnit}
+                      </span>
                       <p>Feels Like</p>
                     </div>
                   </div>
@@ -99,6 +118,11 @@ const App = () => {
                       <p>Humidity</p>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <button className="btn btn-secondary" onClick={handleToggleClick}>
+                    Change to {temperatureUnit === 'C' ? 'Fahrenheit' : 'Celsius'}
+                  </button>
                 </div>
               </header>}
           </div>

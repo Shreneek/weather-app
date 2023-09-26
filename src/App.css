@@ -1,15 +1,16 @@
 .App {
   text-align: center;
 }
+
 .App-header {
-  background-color: #43aefc;
+  background-color: #4cb0db;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
 }
+
 .App-header h5 {
   text-align: left;
   padding-top: 10px;
@@ -17,26 +18,37 @@
   color: #2c99cb;
   margin-bottom: 0;
 }
-.weather-box .description{
+
+.weather-box .description {
   margin: auto;
   margin-bottom: 10px;
   font-size: medium;
   text-align: center;
   text-transform: capitalize
 }
-.weather-box .temperature{
+
+.weather-box .temperature {
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 0;
 }
-.card-body .input{
+
+.card-body .input {
   display: inline-flex;
   margin-bottom: 20px;
 }
-.weather-details .humidity .text p, .weather-details .feels-like .text p{
+
+.weather-details .humidity .text p,
+.weather-details .feels-like .text p {
   margin-bottom: 0;
 }
+
 .App .App-header .card .card-body .weather-details {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.text {
+  text-align: initial;
 }
